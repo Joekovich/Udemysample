@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Heebo:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    background: #f2f2f2;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #aeeccf, #2d6653);
+    background-image: url(img/pexels-s-von-hoerst-2920064.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* NAVBAR */
+nav {
+    background: rgba(219, 219, 219, 0.219);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    color: #555555;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    font-size: 300;
+}
+
+.navigation li {
+    list-style: none;
+}
+
+.navigation li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #112434;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+.navigation li a:hover,
+.navigation li a.active {
+    background: #68e0a8f5;
+    color: #fff;
+}
+
+/* LOGIN CARD */
+
+.login {
+    background: rgba(114, 114, 114, 0.45);
+    /* border-radius: 25px; */
+    /* border: 1px solid rgba(0, 0, 0, 0.225); */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(6px);
+    padding-left: 40px;
+    padding-top: 30px;
+    border-radius: 18px;
+    width: 26%;
+    height: 500px;
+    margin-left: 580px;
+    margin-top: 85px;
+}
+
+.login h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: -50px;
+}
+
+.login a {
+    text-decoration: none;
+    color: rgb(153, 154, 156);
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    width: 70%;
+    background-color:#50d3a1;
+    color: #2b2b2b;
+    padding: 15px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 0;
+    border-radius: 20px;
+    margin-left: 30px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.text {
+    margin-top: 30px;
+    color: #cfcfcf;
+    margin-left: 55px;
+}
+
+.form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+
+.form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #242222;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+    outline: 0;
+    border-bottom-color: lightblue;
+}
+
+.form-control label {
+    position: relative;
+    top: 15px;
+    left: 0;
+}
+
+.form-control label span {
+    display: inline;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+    color: #f5f5f5;
+    transform: translateY(-30px);
+}
+
+/* HAMBURGER */
+.hamburger {
+    position: fixed;
+    top: 40px;
+    right: 20px;
+    z-index: 10;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    background: none;
+    border: none;
+  }
+  
+  .hamburger-top,
+  .hamburger-middle,
+  .hamburger-bottom {
+    position: absolute;
+    width: 25px;
+    height: 4px;
+    top: 0;
+    left: 0;
+    background: #333;
+    color: #969696;
+    transition: all 0.5s;
+  }
+  
+  .hamburger-middle {
+    transform: translateY(5px);
+  }
+  
+  .hamburger-bottom {
+    transform: translateY(10px);
+  }
+
+  /* Transition hamburger to X when open */
+.open {
+    transform: rotate(90deg);
+  }
+  
+  .open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+  }
+  
+  .open .hamburger-middle {
+    display: none;
+  }
+  
+  .open .hamburger-bottom {
+    transform: translate(-45deg) translateY(-6px) translateX(6px);
+  }
+
+
+
+/* SIGN IN */
+
+@media (max-width: 960px) {
+    nav {
+        width: 100%;
+    }
+
+    .logo {
+        margin-left: 200px;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    /* LOGIN CARD */
+
+    .login {
+        margin-left: 180px;
+        width: 50%;
+    }
+}

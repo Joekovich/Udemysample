@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="udemysign.css">
+    <title>Login</title>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">Udemy</a>
+        <ul class="navigation">
+            <li><a href="#"  class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Event</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#" class="active">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <!-- SIGN UP Section -->
+        <div class="login">
+            <h1>Sign-in</h1>
+            <form name="myForm" action="udemy.html" onsubmit="return validateForm()" method="post">
+                <div class="form-control">
+                   <input type="text" required>
+                   <label>Email</label>
+                </div>
+
+                <!-- <div class="form-control">
+                   <input type="text" required>
+                   <label>Username</label>
+                </div> -->
+
+                <div class="form-control">
+                   <input type="password" required>
+                   <label>Password</label>
+                </div>
+    
+                <div class="form-control">
+                    <input type="password" required>
+                    <label>Comfirm Password</label>
+                 </div>
+                 <button class="btn">Send</button>
+                 <p class="text">Already have an account ? <a href="udemysign.html">Sign-in</a></p>
+            </form>
+        </div>
+    
+    <script src="udemy.js"></script>
+</body>
+</html>
